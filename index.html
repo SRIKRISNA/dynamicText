@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>learn</title>
+    <style>
+        .mytext {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mytext">
+        <h1>I am a <span id="words" style="color:yellowgreen">Developer</span></h1>
+    </div>
+    <script type="text/javascript">
+        
+            var words = [
+                "Developer",
+                "Tutor",
+                "Youtuber"
+            ],
+                i = 0;
+            setInterval(function () {
+                $('#words').fadeOut(function () {
+                    $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+                })
+            }, 2000)
+    </script>
+</body>
+
+</html>
